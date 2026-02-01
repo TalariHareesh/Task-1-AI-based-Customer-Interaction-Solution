@@ -1,1 +1,2 @@
-<video src="https://youtu.be/Gzj1IzNLApc?si=nDFiJrTMLsJhsoaX" width="600" controls></video>
+
+[![Watch the video](https://img.youtube.com)](https://youtu.be/Gzj1IzNLApc?si=nDFiJrTMLsJhsoaX)
