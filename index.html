@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Breakthrough Assistant | Iron Lady</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">IRON LADY</div>
+                <div class="mission">Mission: 1 Million Women Leaders</div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unlock Your Next <span class="highlight">Leadership Level</span></h1>
+                    <p>Are you feeling stuck in your career? Take our AI-powered diagnostic to identify your leadership
+                        gaps and get a personalized roadmap to the C-Suite.</p>
+                    <button id="start-btn" class="btn btn-primary">Start Your Diagnostic</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-container" class="quiz-container hidden">
+            <div class="container">
+                <div class="card">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <div id="question-box">
+                        <!-- Questions will be injected here -->
+                    </div>
+                    <div class="controls">
+                        <button id="back-btn" class="btn btn-outline hidden">Back</button>
+                        <button id="next-btn" class="btn btn-primary hidden">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-container" class="results-container hidden">
+            <div class="container">
+                <div class="card result-card">
+                    <div id="ai-analyzing" class="analyzing">
+                        <div class="spinner"></div>
+                        <p>AI is analyzing your profile...</p>
+                    </div>
+                    <div id="results-content" class="hidden">
+                        <h2>Your Leadership Profile Analysis</h2>
+                        <div class="result-breakdown">
+                            <div class="pillar-score">
+                                <h3>Primary Focus: <span id="top-pillar" class="highlight"></span></h3>
+                                <p id="pillar-description"></p>
+                            </div>
+                            <div class="recommendation">
+                                <h3>Recommended Program</h3>
+                                <div id="program-card" class="program-card">
+                                    <h4 id="program-name"></h4>
+                                    <p id="program-detail"></p>
+                                    <a href="https://iamironlady.com" class="btn btn-primary">Learn More & Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="restart-btn" class="btn btn-outline">Retake Diagnostic</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div id="chat-toggle" class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">AI</span>
+        </div>
+
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="bot-avatar">IL</div>
+                    <div>
+                        <h4>Iron Lady Assistant</h4>
+                        <span class="status-online">● Online</span>
+                    </div>
+                </div>
+                <button id="minimize-chat" class="minimize-btn">−</button>
+            </div>
+
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>👋 Hi! I'm your Iron Lady AI Assistant. I can help you:</p>
+                        <ul>
+                            <li>Understand our leadership programs</li>
+                            <li>Answer questions about the diagnostic</li>
+                            <li>Provide career guidance</li>
+                        </ul>
+                        <p>How can I help you today?</p>
+                    </div>
+                    <div class="inline-quick-replies">
+                        <button class="inline-quick-reply-btn"
+                            onclick="handleQuickReply('What programs do you offer?', this)">📚 View Programs</button>
+                        <button class="inline-quick-reply-btn"
+                            onclick="handleQuickReply('Tell me about the diagnostic', this)">📊 About
+                            Diagnostic</button>
+                        <button class="inline-quick-reply-btn"
+                            onclick="handleQuickReply('What are the leadership pillars?', this)">💡 Leadership
+                            Pillars</button>
+                        <button class="inline-quick-reply-btn"
+                            onclick="handleQuickReply('How much does it cost?', this)">💰 Pricing Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask me anything..." />
+                <button id="send-message" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Iron Lady. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</body>
+
+</html>
